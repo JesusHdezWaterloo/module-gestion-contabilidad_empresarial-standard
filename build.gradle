@@ -12,6 +12,7 @@ repositories {
 version = '2.0.0.SNAPSHOT.20201023'
 
 dependencies {
+    compile group: 'org.springframework', name: 'spring-web', version: '5.2.9.RELEASE'
     implementation project(':utils-core')
     
     implementation project(':clean-core-full')
