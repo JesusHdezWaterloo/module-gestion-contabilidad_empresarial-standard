@@ -9,6 +9,8 @@ repositories {
     mavenCentral()
 }
 
+version = '2.0.0.SNAPSHOT.20201023'
+
 dependencies {
     implementation project(':utils-core')
     
