@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jhw.example'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':utils-core')
+    
+    implementation project(':clean-core-full')
+}
+
