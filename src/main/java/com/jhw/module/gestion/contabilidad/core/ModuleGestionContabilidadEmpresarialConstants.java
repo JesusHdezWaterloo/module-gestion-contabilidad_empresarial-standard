@@ -66,7 +66,7 @@ public class ModuleGestionContabilidadEmpresarialConstants {
 
     //-----------------------LIQUIDACION-----------------------\\
     public static final String LIQUIDACION_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/liquidacion";
-    
+
     public static final String CUENTA = "cuenta";
     public static final String LIQUIDACION_FIND_ALL_PATH = "/find_all_liq/{" + CUENTA + "}";
     public static final RequestMethod LIQUIDACION_FIND_ALL_METHOD = RequestMethod.GET;
@@ -74,4 +74,11 @@ public class ModuleGestionContabilidadEmpresarialConstants {
     public static final String CUADRE = "cuadre";
     public static final String LIQUIDACION_GET_PATH = "/get/{" + CUADRE + "}";
     public static final RequestMethod LIQUIDACION_GET_METHOD = RequestMethod.GET;
+
+    //-----------------------MONEDA-----------------------\\
+    public static final String MONEDA_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/moneda";
+
+    public static final String MONEDA_FIND_BASE_PATH = "/find_base";
+    public static final RequestMethod MONEDA_FIND_BASE_METHOD = RequestMethod.GET;
+
 }
