@@ -9,7 +9,7 @@ import com.clean.core.exceptions.ValidationException;
 import com.clean.core.utils.SortBy;
 import com.clean.core.utils.validation.ValidationMessage;
 import com.clean.core.utils.validation.ValidationResult;
-import com.jhw.module.gestion.contabilidad.utils.MonedaHandler;
+import com.jhw.module.gestion.contabilidad.service.MonedaHandler;
 import com.jhw.utils.clean.EntityDomainObjectValidated;
 import java.math.BigDecimal;
 import java.util.Date;

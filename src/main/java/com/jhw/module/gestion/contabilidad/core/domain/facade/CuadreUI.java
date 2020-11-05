@@ -13,7 +13,7 @@ import com.jhw.module.gestion.contabilidad.core.domain.InfoOperacionContableDoma
 import com.jhw.module.gestion.contabilidad.core.domain.MonedaDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.OperacionContableDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.TipoOperacionContableDomain;
-import com.jhw.module.gestion.contabilidad.utils.MonedaHandler;
+import com.jhw.module.gestion.contabilidad.service.MonedaHandler;
 import java.math.BigDecimal;
 import java.util.Date;
 
