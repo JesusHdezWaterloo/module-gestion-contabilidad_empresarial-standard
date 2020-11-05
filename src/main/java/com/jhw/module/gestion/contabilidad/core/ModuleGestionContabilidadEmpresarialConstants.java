@@ -93,8 +93,17 @@ public class ModuleGestionContabilidadEmpresarialConstants {
 
     //-----------------------TIPO CUENTA-----------------------\\
     public static final String TIPO_CUENTA_PATH = CONTABILIDAD_GENERAL_PATH + "/tipo_cuenta";
-    
+
     public static final String TIPO_CUENTA_PATH_FIND_ALL_CUADRE_PATH = "/find_all_cuadre/{" + TIPO_CUENTA + "}";
     public static final RequestMethod TIPO_CUENTA_PATH_FIND_ALL_CUADRE_METHOD = RequestMethod.GET;
 
+    //-----------------------TIPO OPERACION-----------------------\\
+    public static final String TIPO_OPERACION_PATH = CONTABILIDAD_GENERAL_PATH + "/tipo_operacion";
+    
+    public static final String TIPO_OPERACION_PATH_FIND_BY_PATH = "/find_by/{" + SEARCH_TEXT + "}";
+    public static final RequestMethod TIPO_OPERACION_PATH_FIND_BY_METHOD = RequestMethod.GET;
+
+    //-----------------------TITULAR-----------------------\\
+    public static final String TITULAR_PATH = CONTABILIDAD_GENERAL_PATH + "/titular";
+    
 }
