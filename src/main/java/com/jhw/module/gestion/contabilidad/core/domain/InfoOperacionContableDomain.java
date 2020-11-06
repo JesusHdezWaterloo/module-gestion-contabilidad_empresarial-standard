@@ -6,7 +6,7 @@
 package com.jhw.module.gestion.contabilidad.core.domain;
 
 import com.jhw.utils.clean.EntityDomainObjectValidated;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,7 +28,7 @@ public class InfoOperacionContableDomain extends EntityDomainObjectValidated {
     private String nombre;
 
     @NotNull(message = "#msg.module.contabilidad.validation.info_operacion_fecha_null#")
-    private Date fecha;
+    private LocalDate fecha;
 
     @Size(max = 495, message = "#msg.module.contabilidad.validation.descripcion_larga#")
     private String descripcion;
@@ -46,7 +46,7 @@ public class InfoOperacionContableDomain extends EntityDomainObjectValidated {
         this.idInfoOperacionContable = idInfoOperacionContable;
     }
 
-    public InfoOperacionContableDomain(String documento, String nombre, Date fecha, String descripcion, TipoOperacionContableDomain tipoOperacionFk, FormaPagoDomain formaPagoFk) {
+    public InfoOperacionContableDomain(String documento, String nombre, LocalDate fecha, String descripcion, TipoOperacionContableDomain tipoOperacionFk, FormaPagoDomain formaPagoFk) {
         this.documento = documento;
         this.nombre = nombre;
         this.fecha = fecha;
@@ -87,11 +87,11 @@ public class InfoOperacionContableDomain extends EntityDomainObjectValidated {
         this.nombre = nombre;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 

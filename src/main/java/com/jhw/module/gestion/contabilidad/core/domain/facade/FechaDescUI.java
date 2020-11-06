@@ -8,7 +8,7 @@ package com.jhw.module.gestion.contabilidad.core.domain.facade;
 import com.clean.core.domain.VolatileDomainObject;
 import com.jhw.module.gestion.contabilidad.core.domain.FormaPagoDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.InfoOperacionContableDomain;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -16,14 +16,14 @@ import java.util.Date;
  */
 public class FechaDescUI extends VolatileDomainObject {
 
-    private Date fecha;
+    private LocalDate fecha;
     private FormaPagoDomain pago;
     private String descripcion;
 
     public FechaDescUI() {
     }
 
-    public FechaDescUI(Date fecha, FormaPagoDomain pago, String descripcion) {
+    public FechaDescUI(LocalDate fecha, FormaPagoDomain pago, String descripcion) {
         this.fecha = fecha;
         this.pago = pago;
         this.descripcion = descripcion;
@@ -35,11 +35,11 @@ public class FechaDescUI extends VolatileDomainObject {
         this.descripcion = info.getDescripcion();
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
