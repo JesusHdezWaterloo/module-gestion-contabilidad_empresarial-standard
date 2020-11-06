@@ -8,7 +8,11 @@ import java.util.List;
 
 public interface LiquidacionUseCase extends CRUDUseCase<LiquidacionDomain> {
 
+    public List<LiquidacionDomain> findAll(Integer IdCuentaBancaria) throws Exception;
+
     public List<LiquidacionDomain> findAll(CuentaBancariaDomain cuenta) throws Exception;
+
+    public LiquidacionDomain getLiquidacion(Integer idCuadre) throws Exception;
 
     public LiquidacionDomain getLiquidacion(CuadreDomain cuadre) throws Exception;
 }
