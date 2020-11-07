@@ -148,6 +148,8 @@ public class LiquidacionDomain extends EntityDomainObjectValidated implements De
 
     public void setCuadreFk(CuadreDomain cuadreFk) {
         this.cuadreFk = cuadreFk;
+        this.setCredito(MonedaHandler.venta(cuadreFk.getOperacionContableFk().getDebito(), cuadreFk.getOperacionContableFk().getCuentaFk().getMonedaFk(), getCuentaFk().getMonedaFk()));
+        this.setDebito(MonedaHandler.venta(cuadreFk.getOperacionContableFk().getCredito(), cuadreFk.getOperacionContableFk().getCuentaFk().getMonedaFk(), getCuentaFk().getMonedaFk()));
     }
 
     @Override
