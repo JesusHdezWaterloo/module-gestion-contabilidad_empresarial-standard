@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface OperacionContableUseCase extends CRUDUseCase<OperacionContableDomain> {
 
+    public List<OperacionContableDomain> findAll(Integer idCuentaContable) throws Exception;
+
     public List<OperacionContableDomain> findAll(CuentaContableDomain cuenta) throws Exception;
 
 }
