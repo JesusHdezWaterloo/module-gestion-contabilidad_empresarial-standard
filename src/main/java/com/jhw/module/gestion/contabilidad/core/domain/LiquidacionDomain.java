@@ -12,7 +12,7 @@ import com.clean.core.utils.validation.ValidationResult;
 import com.jhw.module.gestion.contabilidad.utils.MonedaHandler;
 import com.jhw.utils.clean.EntityDomainObjectValidated;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -45,7 +45,7 @@ public class LiquidacionDomain extends EntityDomainObjectValidated implements De
     private BigDecimal credito;
 
     @NotNull(message = "#msg.module.contabilidad.validation.info_operacion_fecha_null#")
-    private Date fecha;
+    private LocalDate fecha;
 
     @Size(max = 495, message = "#msg.module.contabilidad.validation.descripcion_larga#")
     private String descripcion;
@@ -63,7 +63,7 @@ public class LiquidacionDomain extends EntityDomainObjectValidated implements De
         this.idLiquidacion = idOperacionBancaria;
     }
 
-    public LiquidacionDomain(String documento, String nombre, BigDecimal debito, BigDecimal credito, Date fecha, String descripcion, CuentaBancariaDomain cuentaFk, CuadreDomain cuadreFk) {
+    public LiquidacionDomain(String documento, String nombre, BigDecimal debito, BigDecimal credito, LocalDate fecha, String descripcion, CuentaBancariaDomain cuentaFk, CuadreDomain cuadreFk) {
         this.documento = documento;
         this.nombre = nombre;
         this.debito = debito;
@@ -118,11 +118,11 @@ public class LiquidacionDomain extends EntityDomainObjectValidated implements De
         this.credito = credito;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 

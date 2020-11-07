@@ -10,8 +10,6 @@ import java.math.BigDecimal;
  */
 public class MonedaHandler {
 
-    private static MonedaDomain mon = null;
-
     /**
      * Conversion para vender una moneda: TENGO 'valor' de la moneda 'desde'
      * para vender y quiero que me den a cambio 'hasta'.<\br>
@@ -74,18 +72,5 @@ public class MonedaHandler {
             devol = cantidad.multiply(quiero.getCompra()).divide(tengo.getCompra());
         }
         return devol;
-    }
-
-    public static MonedaDomain getMonedaBase() {
-        if (mon != null) {
-            return mon;
-        }
-        /*try {//todo
-            mon = ContabilidadCoreModule.getInstance().getImplementation(MonedaUseCase.class)
-                    .findMonedaBase();
-        } catch (Exception ex) {
-            ExceptionHandler.handleException(ex);
-        }*/
-        return mon;
     }
 }

@@ -15,7 +15,7 @@ import com.jhw.module.gestion.contabilidad.core.domain.OperacionContableDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.TipoOperacionContableDomain;
 import com.jhw.module.gestion.contabilidad.utils.MonedaHandler;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -109,7 +109,7 @@ public class CuadreUI extends VolatileDomainObject {
         return docNombre.getNombre();
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fechaDesc.getFecha();
     }
 
