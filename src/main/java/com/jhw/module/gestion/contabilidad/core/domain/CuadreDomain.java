@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
 @SortBy(priority = {"liquidada"}, order = SortBy.ASCENDING)
-public class CuadreDomain extends EntityDomainObjectValidated {
+public class CuadreDomain extends EntityDomainObjectValidated implements Comparable<CuadreDomain> {
 
     private static final long serialVersionUID = 1L;
 
@@ -122,6 +122,11 @@ public class CuadreDomain extends EntityDomainObjectValidated {
             v.add(ValidationMessage.from("operacionContableCuadreFk", "No se puede hacer un cuadre contra una cuenta que no sea liquidable."));
         }
         return v.throwException();
+    }
+
+    @Override
+    public int compareTo(CuadreDomain o) {
+        return -1 * info().getFecha().compareTo(o.info().getFecha());
     }
 
 }
