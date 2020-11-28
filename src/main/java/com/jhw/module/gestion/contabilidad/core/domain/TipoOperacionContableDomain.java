@@ -53,6 +53,7 @@ public class TipoOperacionContableDomain extends EntityDomainObjectValidated {
         this.descripcion = descripcion;
         this.tipoCuentaCuadreDefectoFk = tipoCuentaCuadreDefectoFk;
         this.tipoCuentaDefectoFk = tipoCuentaDefectoFk;
+        validate();
     }
 
     public Integer getIdTipoOperacion() {

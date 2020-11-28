@@ -43,6 +43,7 @@ public class CuadreDomain extends EntityDomainObjectValidated implements Compara
         this.liquidada = liquidada;
         this.operacionContableCuadreFk = operacionContableCuadreFk;
         this.operacionContableFk = operacionContableFk;
+        validate();
     }
 
     public InfoOperacionContableDomain info() {

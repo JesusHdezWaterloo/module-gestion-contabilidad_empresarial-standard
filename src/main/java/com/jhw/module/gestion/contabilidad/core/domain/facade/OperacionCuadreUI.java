@@ -5,23 +5,32 @@
  */
 package com.jhw.module.gestion.contabilidad.core.domain.facade;
 
-import com.clean.core.domain.VolatileDomainObject;
 import com.jhw.module.gestion.contabilidad.core.domain.CuadreDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.CuentaContableDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.MonedaDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.TipoOperacionContableDomain;
+import com.jhw.utils.clean.EntityDomainObjectValidated;
 import java.math.BigDecimal;
+import javax.validation.constraints.NotNull;
 
 /**
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class OperacionCuadreUI extends VolatileDomainObject {
+public class OperacionCuadreUI extends EntityDomainObjectValidated {
 
     private BigDecimal valor;
+
+    @NotNull(message = "#msg.module.contabilidad.validation.cuenta_moneda_null#")
     private MonedaDomain moneda;
+
+    @NotNull(message = "#msg.module.contabilidad.validation.operacion_cuenta_null#")
     private CuentaContableDomain cuenta;
+
+    @NotNull(message = "#msg.module.contabilidad.validation.operacion_cuenta_null#")
     private CuentaContableDomain cuadre;
+
+    @NotNull(message = "#msg.module.contabilidad.validation.info_operacion_tipo_op_null#")
     private TipoOperacionContableDomain tipoOp;
 
     public OperacionCuadreUI() {
@@ -33,6 +42,7 @@ public class OperacionCuadreUI extends VolatileDomainObject {
         this.cuenta = cuenta;
         this.cuadre = cuadre;
         this.tipoOp = tipoOp;
+        validate();
     }
 
     public OperacionCuadreUI(CuadreDomain cuadre) {
@@ -41,6 +51,7 @@ public class OperacionCuadreUI extends VolatileDomainObject {
         this.cuenta = cuadre.getOperacionContableFk().getCuentaFk();
         this.cuadre = cuadre.getOperacionContableCuadreFk().getCuentaFk();
         this.tipoOp = cuadre.info().getTipoOperacionFk();
+        validate();
     }
 
     public TipoOperacionContableDomain getTipoOp() {

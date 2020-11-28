@@ -44,6 +44,7 @@ public class SubcuentaDomain extends EntityDomainObjectValidated {
         this.descripcion = descripcion;
         this.cuentaHijoFk = cuentaHijoFk;
         this.cuentaPadreFk = cuentaPadreFk;
+        validate();
     }
 
     public Integer getIdSubcuenta() {

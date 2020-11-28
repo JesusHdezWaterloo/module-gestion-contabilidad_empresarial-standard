@@ -5,20 +5,27 @@
  */
 package com.jhw.module.gestion.contabilidad.core.domain.facade;
 
-import com.clean.core.domain.VolatileDomainObject;
 import com.jhw.module.gestion.contabilidad.core.domain.FormaPagoDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.InfoOperacionContableDomain;
+import com.jhw.utils.clean.EntityDomainObjectValidated;
 import java.time.LocalDate;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class FechaDescUI extends VolatileDomainObject {
+public class FechaDescUI extends EntityDomainObjectValidated {
 
+    @NotNull(message = "#msg.module.contabilidad.validation.info_operacion_fecha_null#")
     private LocalDate fecha;
-    private FormaPagoDomain pago;
+
+    @Size(max = 495, message = "#msg.module.contabilidad.validation.descripcion_larga#")
     private String descripcion;
+
+    @NotNull(message = "#msg.module.contabilidad.validation.info_operacion_metodo_pago_null#")
+    private FormaPagoDomain pago;
 
     public FechaDescUI() {
     }
@@ -27,12 +34,14 @@ public class FechaDescUI extends VolatileDomainObject {
         this.fecha = fecha;
         this.pago = pago;
         this.descripcion = descripcion;
+        validate();
     }
 
     public FechaDescUI(InfoOperacionContableDomain info) {
         this.fecha = info.getFecha();
         this.pago = info.getFormaPagoFk();
         this.descripcion = info.getDescripcion();
+        validate();
     }
 
     public LocalDate getFecha() {

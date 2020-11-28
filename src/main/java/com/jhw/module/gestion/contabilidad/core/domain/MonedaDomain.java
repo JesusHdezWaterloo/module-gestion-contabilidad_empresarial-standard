@@ -47,6 +47,7 @@ public class MonedaDomain extends EntityDomainObjectValidated {
         this.compra = compra;
         this.venta = venta;
         this.descripcion = descripcion;
+        validate();
     }
 
     public Integer getIdMoneda() {

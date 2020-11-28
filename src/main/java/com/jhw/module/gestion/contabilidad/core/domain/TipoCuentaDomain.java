@@ -42,6 +42,7 @@ public class TipoCuentaDomain extends EntityDomainObjectValidated {
         this.debitoCredito = debitoCredito;
         this.liquidable = liquidable;
         this.descripcion = descripcion;
+        validate();
     }
 
     public boolean isLiquidable() {

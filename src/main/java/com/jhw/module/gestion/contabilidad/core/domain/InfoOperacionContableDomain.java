@@ -53,6 +53,7 @@ public class InfoOperacionContableDomain extends EntityDomainObjectValidated {
         this.descripcion = descripcion;
         this.tipoOperacionFk = tipoOperacionFk;
         this.formaPagoFk = formaPagoFk;
+        validate();
     }
 
     public TipoOperacionContableDomain getTipoOperacionFk() {
