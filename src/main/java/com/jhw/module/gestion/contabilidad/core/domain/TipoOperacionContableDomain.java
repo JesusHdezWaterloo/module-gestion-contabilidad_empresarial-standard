@@ -27,10 +27,6 @@ public class TipoOperacionContableDomain extends EntityDomainObjectValidated {
     @Size(max = 95, message = "#msg.module.contabilidad.validation.tipo_operacion_nombre_largo#")
     private String nombreOperacion;
 
-    @NotEmpty(message = "#msg.module.contabilidad.validation.tipo_operacion_key_enum_vacio#")
-    @Size(max = 95, message = "#msg.module.contabilidad.validation.tipo_operacion_key_enum_largo#")
-    private String keyEnum;
-
     @Size(max = 495, message = "#msg.module.contabilidad.validation.descripcion_larga#")
     private String descripcion;
 
@@ -47,9 +43,8 @@ public class TipoOperacionContableDomain extends EntityDomainObjectValidated {
         this.idTipoOperacion = idTipoOperacion;
     }
 
-    public TipoOperacionContableDomain(String nombreOperacion, String keyEnum, String descripcion, TipoCuentaDomain tipoCuentaCuadreDefectoFk, TipoCuentaDomain tipoCuentaDefectoFk) {
+    public TipoOperacionContableDomain(String nombreOperacion, String descripcion, TipoCuentaDomain tipoCuentaCuadreDefectoFk, TipoCuentaDomain tipoCuentaDefectoFk) {
         this.nombreOperacion = nombreOperacion;
-        this.keyEnum = keyEnum;
         this.descripcion = descripcion;
         this.tipoCuentaCuadreDefectoFk = tipoCuentaCuadreDefectoFk;
         this.tipoCuentaDefectoFk = tipoCuentaDefectoFk;
@@ -70,14 +65,6 @@ public class TipoOperacionContableDomain extends EntityDomainObjectValidated {
 
     public void setNombreOperacion(String nombreOperacion) {
         this.nombreOperacion = nombreOperacion;
-    }
-
-    public String getKeyEnum() {
-        return keyEnum;
-    }
-
-    public void setKeyEnum(String keyEnum) {
-        this.keyEnum = keyEnum;
     }
 
     public String getDescripcion() {

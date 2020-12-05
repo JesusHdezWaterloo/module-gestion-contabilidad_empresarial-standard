@@ -100,9 +100,6 @@ public class ModuleGestionContabilidadEmpresarialConstants {
     //-----------------------TIPO OPERACION-----------------------\\
     public static final String TIPO_OPERACION_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/tipo_operacion";
     
-    public static final String TIPO_OPERACION_PATH_FIND_BY_PATH = "/find_by/{" + SEARCH_TEXT + "}";
-    public static final RequestMethod TIPO_OPERACION_PATH_FIND_BY_METHOD = RequestMethod.GET;
-
     //-----------------------TITULAR-----------------------\\
     public static final String TITULAR_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/titular";
     
