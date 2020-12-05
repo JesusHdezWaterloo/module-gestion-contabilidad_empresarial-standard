@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface TipoCuentaUseCase extends CRUDUseCase<TipoCuentaDomain> {
 
-    public List<TipoCuentaDomain> findAllCuadre(Integer idTipoCuenta) throws Exception;
+    public List<TipoCuentaDomain> findAllEquivalent(Integer idTipoCuenta) throws Exception;
 
-    public List<TipoCuentaDomain> findAllCuadre(TipoCuentaDomain tipoCuenta) throws Exception;
+    public List<TipoCuentaDomain> findAllEquivalent(TipoCuentaDomain tipoCuenta) throws Exception;
 
 }
