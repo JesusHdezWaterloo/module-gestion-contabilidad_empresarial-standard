@@ -36,6 +36,7 @@ public class FormaPagoDomain extends EntityDomainObjectValidated {
     public FormaPagoDomain(String nombreFormaPago, String descripcion) {
         this.nombreFormaPago = nombreFormaPago;
         this.descripcion = descripcion;
+        validate();
     }
 
     public Integer getIdFormaPago() {

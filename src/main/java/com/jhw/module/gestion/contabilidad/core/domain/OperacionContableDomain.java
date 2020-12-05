@@ -45,6 +45,7 @@ public class OperacionContableDomain extends EntityDomainObjectValidated impleme
         this.credito = credito;
         this.cuentaFk = cuentaFk;
         this.infoOperacionContableFk = infoOperacionContableFk;
+        validate();
     }
 
     public Integer getIdOperacionContable() {

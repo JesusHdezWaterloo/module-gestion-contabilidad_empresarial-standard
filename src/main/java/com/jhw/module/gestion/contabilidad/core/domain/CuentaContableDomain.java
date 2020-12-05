@@ -66,6 +66,7 @@ public class CuentaContableDomain extends EntityDomainObjectValidated implements
         this.monedaFk = monedaFk;
         this.tipoCuentaFk = tipoCuentaFk;
         this.titularFk = titularFk;
+        validate();
     }
 
     public TitularDomain getTitularFk() {

@@ -72,6 +72,7 @@ public class LiquidacionDomain extends EntityDomainObjectValidated implements De
         this.descripcion = descripcion;
         this.cuentaFk = cuentaFk;
         this.cuadreFk = cuadreFk;
+        validate();
     }
 
     public Integer getIdLiquidacion() {
