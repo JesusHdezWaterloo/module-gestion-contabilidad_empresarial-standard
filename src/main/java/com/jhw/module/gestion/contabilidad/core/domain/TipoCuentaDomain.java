@@ -6,6 +6,7 @@
 package com.jhw.module.gestion.contabilidad.core.domain;
 
 import com.clean.core.utils.SortBy;
+import com.jhw.module.gestion.contabilidad.utils.Equivalent;
 import com.jhw.utils.clean.EntityDomainObjectValidated;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -15,7 +16,7 @@ import javax.validation.constraints.Size;
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
 @SortBy(priority = {"nombreTipoCuenta"})
-public class TipoCuentaDomain extends EntityDomainObjectValidated {
+public class TipoCuentaDomain extends EntityDomainObjectValidated implements Equivalent<TipoCuentaDomain> {
 
     private Integer idTipoCuenta;
 
@@ -43,6 +44,11 @@ public class TipoCuentaDomain extends EntityDomainObjectValidated {
         this.liquidable = liquidable;
         this.descripcion = descripcion;
         validate();
+    }
+
+    @Override
+    public boolean equivalent(TipoCuentaDomain other) {
+        return this.liquidable == other.liquidable && debitoCredito == other.debitoCredito;
     }
 
     public boolean isLiquidable() {
