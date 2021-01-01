@@ -5,11 +5,11 @@
  */
 package com.jhw.module.gestion.contabilidad.core.domain;
 
-import com.clean.core.exceptions.ValidationException;
-import com.clean.core.utils.SortBy;
-import com.clean.core.utils.validation.ValidationMessage;
-import com.clean.core.utils.validation.ValidationResult;
-import com.jhw.utils.clean.EntityDomainObjectValidated;
+import com.root101.clean.core.exceptions.ValidationException;
+import com.root101.clean.core.utils.SortBy;
+import com.root101.clean.core.utils.validation.ValidationMessage;
+import com.root101.clean.core.utils.validation.ValidationResult;
+import com.root101.utils.clean.EntityDomainObjectValidated;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

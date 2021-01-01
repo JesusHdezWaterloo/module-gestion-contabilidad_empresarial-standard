@@ -5,7 +5,7 @@
  */
 package com.jhw.module.gestion.contabilidad.core.domain.facade;
 
-import com.clean.core.domain.VolatileDomainObject;
+import com.root101.clean.core.domain.VolatileDomainObject;
 import com.jhw.module.gestion.contabilidad.core.domain.CuadreDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.CuentaContableDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.FormaPagoDomain;

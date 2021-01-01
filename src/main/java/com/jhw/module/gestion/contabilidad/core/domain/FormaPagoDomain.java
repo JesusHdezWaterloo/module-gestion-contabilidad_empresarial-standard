@@ -5,8 +5,8 @@
  */
 package com.jhw.module.gestion.contabilidad.core.domain;
 
-import com.clean.core.utils.SortBy;
-import com.jhw.utils.clean.EntityDomainObjectValidated;
+import com.root101.clean.core.utils.SortBy;
+import com.root101.utils.clean.EntityDomainObjectValidated;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 

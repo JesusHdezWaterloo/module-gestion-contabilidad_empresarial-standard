@@ -7,7 +7,7 @@ package com.jhw.module.gestion.contabilidad.core.domain.facade;
 
 import com.jhw.module.gestion.contabilidad.core.domain.FormaPagoDomain;
 import com.jhw.module.gestion.contabilidad.core.domain.InfoOperacionContableDomain;
-import com.jhw.utils.clean.EntityDomainObjectValidated;
+import com.root101.utils.clean.EntityDomainObjectValidated;
 import java.time.LocalDate;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
