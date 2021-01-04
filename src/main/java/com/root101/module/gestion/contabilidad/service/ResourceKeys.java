@@ -23,5 +23,4 @@ package com.root101.module.gestion.contabilidad.service;
  */
 public class ResourceKeys {
 
-    public static final String KEY_MODULE_NAME_CONTAB = "com.root.module.gestion.contabilidad.name";
 }
