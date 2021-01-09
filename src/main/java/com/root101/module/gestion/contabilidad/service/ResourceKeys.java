@@ -22,5 +22,5 @@ package com.root101.module.gestion.contabilidad.service;
  * @author JesusHdezWaterloo@Github
  */
 public class ResourceKeys {
-    
+
 }

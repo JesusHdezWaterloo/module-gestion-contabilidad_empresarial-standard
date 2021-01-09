@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.root101.module.gestion.contabilidad.core;
+package com.root101.module.gestion.contabilidad.rest;
 
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Root101 (jhernandezb96@gmail.com, +53-5-426-8660)
  * @author JesusHdezWaterloo@Github
  */
-public class ModuleGestionContabilidadEmpresarialConstants {
+public class ModuleGestionContabilidadRESTConstants {
 
     public static final String CONTABILIDAD_GENERAL_PATH = "/contabilidad";
 
@@ -111,8 +111,8 @@ public class ModuleGestionContabilidadEmpresarialConstants {
 
     //-----------------------TIPO OPERACION-----------------------\\
     public static final String TIPO_OPERACION_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/tipo_operacion";
-    
+
     //-----------------------TITULAR-----------------------\\
     public static final String TITULAR_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/titular";
-    
+
 }
