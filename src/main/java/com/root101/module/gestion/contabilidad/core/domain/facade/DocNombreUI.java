@@ -36,7 +36,6 @@ public class DocNombreUI extends EntityDomainObjectValidated {
     @Size(max = 95, message = "#msg.module.contabilidad.validation.info_operacion_nombre_largo#")
     private String nombre;
 
-
     public DocNombreUI() {
     }
 

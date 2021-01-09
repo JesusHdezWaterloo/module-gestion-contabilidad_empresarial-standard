@@ -111,8 +111,8 @@ public class ModuleGestionContabilidadRESTConstants {
 
     //-----------------------TIPO OPERACION-----------------------\\
     public static final String TIPO_OPERACION_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/tipo_operacion";
-    
+
     //-----------------------TITULAR-----------------------\\
     public static final String TITULAR_GENERAL_PATH = CONTABILIDAD_GENERAL_PATH + "/titular";
-    
+
 }
